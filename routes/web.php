@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;  //外部にあるBookControllerクラスをインポート。
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BookController::class, 'index']);
+Route::get('/books/create', [BookController::class, 'create']);
+Route::get('/books/{book}', [BookController::class, 'show']);
+Route::post('/books', [BookController::class, 'store']);
