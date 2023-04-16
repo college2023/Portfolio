@@ -14,11 +14,15 @@
         <div class="content">
             <div class="content__book">
                 <h3>本文</h3>
-                <p>{{ $book->body }}</p>    
+                <p class='body'>{{ $book->body }}</p>
             </div>
         </div>
-        <a href='/books/create'>create</a>
+        <div>
+            <a href="/categories/{{ $book->category->id }}">{{ $book->category->name }}</a>
+            <a href="/authors/{{ $book->author->id }}">{{ $book->author->name }}</a>
+        </div>
         <div class="footer">
+            <a href='/books/review'>create(本のくちこみを書く)</a>
             <a href="/">戻る</a>
         </div>
     </body>
