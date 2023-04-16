@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('category'); //本のカテゴリー
+            $table->string('name', 50); //本のカテゴリー
+            $table->timestamps(); //created_atとupdated_at
         });
     }
 
