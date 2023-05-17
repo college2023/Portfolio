@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <div style='background-color: #F3F4F6; padding: 200px; text-align: center;'>
+        <div style='background-color: #F3F4F6; padding: 150px; text-align: center;'>
         
         <form method="POST" action="/books/search">
             @csrf
@@ -22,8 +22,7 @@
         
         <div class="information">
             <div style='padding: 0.5em 1em; border: double 5px #4ec4d3; margin:20px 100px;'>
-                <h3>【運営からのお願い】</h3>
-                <h4>このサイトは、本にまつわる皆さんの足跡を共有する場所です。</h4>
+                <h4>このサイトは、皆さんの足跡を共有する場所です。</h4>
                 <h4>快適なサイト作りにご協力いただき、ありがとうございます。</h4>
             </div>
         </div>
