@@ -33,10 +33,11 @@ Route::middleware('auth')->group(function () {
 
 Route::controller(BookController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
-    Route::get('/books/search', 'search')->name('search');
+    Route::post('/books/search', 'search')->name('search');
+    Route::post('/review/{book}', 'test')->name('review');
     Route::post('/books/store', 'store')->name('store');
     Route::get('/books/create', 'create')->name('create');
-    Route::get('/books/{book}', 'show')->name('show');
+    Route::get('/books/search/{book}', 'show')->name('show'); //getをpostに変更すると404|NOT FOUNDになる。
     // Route::put('/books/{book}', 'update')->name('update');
     // Route::delete('/books/{book}', 'delete')->name('delete');
     // Route::get('/books/{book}/edit', 'edit')->name('edit');
