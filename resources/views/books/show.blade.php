@@ -68,7 +68,7 @@
                 @foreach($reviews as $review)
                 <div style='padding: 0.5em 1em; border: solid 2px #4ec4d3; margin:20px 100px;'>
                     <p>場所：{{ $review['address'] }}</p>
-                    <p>投稿者：{{ $review['user_id'] }}</p>
+                    <p>投稿者：{{ $review->user->name }}</p>
                     <p>内容：{{ $review['body'] }}</p>
     
                     {{--<img src="{{ $review->image_url }}" alt="画像が読み込めません。"/>--}}
